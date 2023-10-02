@@ -6,7 +6,7 @@ STORAGE_ADVERTS = {
         title="Sell airpods",
         text="Sell white new airpods for 15$",
         author_id=1,
-        published=False
+        published=False,
     ),
     2: Advert(
         id=2,
@@ -14,14 +14,8 @@ STORAGE_ADVERTS = {
         text="Red toyota, sedan, produced in 2005",
         author_id=1,
         published=False,
-        moder_com="Documents are fake"
-    )
+        moder_com="Documents are fake",
+    ),
 }
 
-STORAGE_USERS = {
-    1: User(
-        id=1,
-        nickname="Seller",
-        email="gooddeal@gmail.com"
-    )
-}
+STORAGE_USERS = {1: User(id=1, nickname="Seller", email="gooddeal@gmail.com")}

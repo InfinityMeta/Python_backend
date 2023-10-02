@@ -3,6 +3,7 @@ from pydantic import BaseModel
 
 class Advert(BaseModel):
     """Contract for advert."""
+
     id: int
     title: str
     text: str
@@ -13,6 +14,7 @@ class Advert(BaseModel):
 
 class User(BaseModel):
     """Contract for user."""
+
     id: int
     nickname: str | None = None
     email: str

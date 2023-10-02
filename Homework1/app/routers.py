@@ -1,7 +1,6 @@
+import contracts
 from fastapi import APIRouter, status
 from fastapi.responses import JSONResponse
-
-import contracts
 from storage import STORAGE_ADVERTS, STORAGE_USERS
 
 HTTP_200_OK = status.HTTP_200_OK
@@ -61,7 +60,7 @@ async def read_advert_text(advert_id: int, skip_l: int = 0, skip_r: int = 0):
     if skip_l > text_len or skip_r > text_len or skip_l > text_len - skip_r:
         return JSONResponse(status_code=HTTP_400_BAD_REQUEST, content=None)
 
-    advert.text = advert.text[skip_l:text_len - skip_r]
+    advert.text = advert.text[skip_l : text_len - skip_r]
     return JSONResponse(status_code=HTTP_200_OK, content={"text": advert.text})
 
 
