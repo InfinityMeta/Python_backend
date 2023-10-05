@@ -1,5 +1,19 @@
 {
-	"python.formatting.provider": "black",
-	"python.linting.enabled": true,
-	"python.linting.flake8Enabled": true
+    "[python]": {
+        "python.formatting.provider": "none",
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "python.linting.enabled": true,
+        "python.linting.flake8Enabled": true,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true
+		},
+    },
+	"isort.args":["--profile", "black"],
+    "workbench.colorTheme": "Dark+ (contrast)",
+
+    "gopls": {
+        "experimentalWorkspaceModule": true,
+    },
+    "window.zoomLevel": 1
 }

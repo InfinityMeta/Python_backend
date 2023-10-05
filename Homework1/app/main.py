@@ -1,7 +1,6 @@
 import time
 
 from fastapi import FastAPI, Request
-
 from routers import router
 
 app = FastAPI(
