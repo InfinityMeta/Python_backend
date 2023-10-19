@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.ml";
+option java_outer_classname = "PenguinsProto";
+option objc_class_prefix = "HLW";
+
+package penguins;
+
+service PenguinsPredictor {
+  rpc PredictPenguinsSpecies (PenguinsPredictRequest) returns (PenguinsPredictReply) {}
+}
+
+message PenguinsPredictRequest {
+  string island = 1;
+  double bill_length_mm = 2;
+  double bill_depth_mm = 3;
+  int32 flipper_length_mm	= 4;
+  int32 body_mass_g = 5;
+  string sex = 6;
+}
+
+message PenguinsPredictReply {
+  string species = 1;
+}
