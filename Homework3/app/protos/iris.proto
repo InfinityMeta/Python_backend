@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.ml";
+option java_outer_classname = "IrisProto";
+option objc_class_prefix = "HLW";
+
+package iris;
+
+service IrisPredictor {
+  rpc PredictIrisSpecies (IrisPredictRequest) returns (IrisPredictReply) {}
+}
+
+message IrisPredictRequest {
+  double sepal_length = 1;
+  double sepal_width = 2;
+  double petal_length = 3;
+  double petal_width = 4;
+}
+
+message IrisPredictReply {
+  string species = 1;
+}
+
+
+
